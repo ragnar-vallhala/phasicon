@@ -160,6 +160,115 @@ nav a:hover {
     max-width: 600px;
 }
 
+
+
+/* Technology Section */
+.technology {
+    padding: 6rem 4rem;
+    background-color: var(--bg-color);
+}
+
+.tech-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.tech-header h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent-dark);
+}
+
+.tech-header p {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #666;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-card {
+    border-radius: 20px;
+    padding: 3rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-visual {
+    background-color: #4a5d3f; /* Deep Olive */
+    background: linear-gradient(135deg, #4a5d3f 0%, #2e3b26 100%);
+}
+
+.card-patch {
+    background-color: #8da370; /* Sage Green */
+    background: linear-gradient(135deg, #8da370 0%, #6b8255 100%);
+}
+
+.tech-card h3 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Decorative Card Elements */
+.card-visual-element, .patch-shape {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    opacity: 0.2;
+}
+
+.pulse-ring {
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: pulse 3s infinite;
+}
+
+.patch-shape {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: morph 6s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes morph {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
 /* Gallery / Collection */
 .gallery {
     padding: 4rem;
@@ -400,5 +509,18 @@ footer {
     .intro-title {
         font-size: 2.5rem;
         margin-bottom: 1.5rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-card {
+        min-height: 300px;
+        padding: 2rem;
+    }
+
+    .tech-header h2 {
+        font-size: 2rem;
     }
 }
