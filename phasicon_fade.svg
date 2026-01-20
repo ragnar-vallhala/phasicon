@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250">
+  <style>
+    .petal { 
+      fill: black;
+      opacity: 0.3;
+      animation: fade 1s linear infinite;
+    }
+    @keyframes fade {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    
+    /* Staggered delays for clockwise effect */
+    .p1 { animation-delay: 0s; }    /* 0 deg */
+    .p2 { animation-delay: 0.125s; } /* 45 deg */
+    .p3 { animation-delay: 0.25s; }  /* 90 deg */
+    .p4 { animation-delay: 0.375s; } /* 135 deg */
+    .p5 { animation-delay: 0.5s; }   /* 180 deg */
+    .p6 { animation-delay: 0.625s; } /* 225 deg */
+    .p7 { animation-delay: 0.75s; }  /* 270 deg */
+    .p8 { animation-delay: 0.875s; } /* 315 deg */
+  </style>
+  
+  <defs>
+    <!-- Petal shape: pointing up (negative Y) from origin -->
+    <path id="petal" d="M0,0 C14,-12 14,-35 0,-50 C-14,-35 -14,-12 0,0" />
+  </defs>
+
+  <!-- Petals Group centered in 250x250 (Center x=125, y=125) -->
+  <g transform="translate(125, 125)">
+    <!-- Clockwise Order -->
+    <use href="#petal" class="petal p1" transform="rotate(0) translate(0, -35)" />
+    <use href="#petal" class="petal p2" transform="rotate(45) translate(0, -35)" />
+    <use href="#petal" class="petal p3" transform="rotate(90) translate(0, -35)" />
+    <use href="#petal" class="petal p4" transform="rotate(135) translate(0, -35)" />
+    <use href="#petal" class="petal p5" transform="rotate(180) translate(0, -35)" />
+    <use href="#petal" class="petal p6" transform="rotate(225) translate(0, -35)" />
+    <use href="#petal" class="petal p7" transform="rotate(270) translate(0, -35)" />
+    <use href="#petal" class="petal p8" transform="rotate(315) translate(0, -35)" />
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250">
+  <style>
+    .petal { 
+      fill: black; 
+    }
+    .spinner {
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: translate(125px, 125px) rotate(0deg); }
+      100% { transform: translate(125px, 125px) rotate(360deg); }
+    }
+  </style>
+  
+  <defs>
+    <!-- Petal shape: pointing up (negative Y) from origin -->
+    <path id="petal" d="M0,0 C14,-12 14,-35 0,-50 C-14,-35 -14,-12 0,0" />
+  </defs>
+
+  <!-- Petals Group centered in 250x250 (Center x=125, y=125) -->
+  <g transform="translate(125, 125)" class="petal spinner">
+    <!-- Top -->
+    <use href="#petal" transform="rotate(0) translate(0, -35)" />
+    <!-- Top Right -->
+    <use href="#petal" transform="rotate(45) translate(0, -35)" />
+    <!-- Top Left -->
+    <use href="#petal" transform="rotate(-45) translate(0, -35)" /> <!-- 315 deg -->
+    <!-- Left -->
+    <use href="#petal" transform="rotate(-90) translate(0, -35)" /> <!-- 270 deg -->
+    <!-- Bottom -->
+    <use href="#petal" transform="rotate(180) translate(0, -35)" />
+    <!-- Bottom Left -->
+    <use href="#petal" transform="rotate(225) translate(0, -35)" />
+    <!-- Bottom Right -->
+    <use href="#petal" transform="rotate(135) translate(0, -35)" />
+    <!-- Right (New, 8th petal) -->
+    <use href="#petal" transform="rotate(90) translate(0, -35)" />
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    path { fill: none; stroke: black; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <!-- Left Leaf -->
+  <path d="M50 70 Q 10 70 10 40 Q 30 20 50 70" />
+  <!-- Right Leaf -->
+  <path d="M50 70 Q 90 70 90 40 Q 70 20 50 70" />
+  <!-- Adjusting control points to match image better: wide leaves -->
+  <!-- Let's try a different curve for wider look -->
+</svg>

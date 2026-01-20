@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    path { fill: none; stroke: black; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <!-- Left Arc -->
+  <path d="M20 70 A 15 15 0 0 1 50 70" />
+  <!-- Middle/Right Arc -->
+  <path d="M45 70 A 15 15 0 0 1 75 70" /> 
+  <!-- Tall Loop/Hook thing -->
+  <!-- Looked like a large shepherd hook on the right -->
+  <path d="M85 70 L 80 40 Q 75 20 65 25" /> 
+  <!-- Re-evaluating based on "landscape" description from first glance -->
+  <!-- Image 4: Two small hills and a tall curved line on right -->
+</svg>

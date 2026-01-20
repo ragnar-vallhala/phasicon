@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    path, circle { fill: none; stroke: black; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <!-- Left Tree (Larger) -->
+  <circle cx="35" cy="45" r="20" />
+  <path d="M35 65 L 35 80" /> <!-- Stem needs to start from bottom of circle -->
+  <!-- Correction: 45+20 = 65. So stem starts at 65. -->
+
+  <!-- Right Tree (Smaller) -->
+  <circle cx="75" cy="55" r="15" />
+  <path d="M75 70 L 75 80" /> <!-- 55+15 = 70 -->
+</svg>

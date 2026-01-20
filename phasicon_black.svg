@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 250">
+  <style>
+    .text { 
+      font-family: "Times New Roman", Times, serif; 
+      font-size: 60px; 
+      fill: black; 
+      letter-spacing: 3px; 
+    }
+    .petal { 
+      fill: black; 
+    }
+  </style>
+  
+  <defs>
+    <!-- Petal shape: pointing up (negative Y) from origin -->
+    <path id="petal" d="M0,0 C12,-12 12,-35 0,-50 C-12,-35 -12,-12 0,0" />
+  </defs>
+
+  <!-- Petals Group shifted left (Center x=180) -->
+  <g transform="translate(180, 125)">
+    <!-- Arc from Top to Left -->
+    <use href="#petal" transform="rotate(0) translate(0, -60)" />   <!-- Top -->
+    <use href="#petal" transform="rotate(-45) translate(0, -60)" /> <!-- Top Left -->
+    <use href="#petal" transform="rotate(-90) translate(0, -60)" /> <!-- Left (New) -->
+
+    <!-- Arc from Bottom to Right (partial) -->
+    <use href="#petal" transform="rotate(180) translate(0, -60)" /> <!-- Bottom -->
+    <use href="#petal" transform="rotate(225) translate(0, -60)" /> <!-- Bottom Left -->
+    
+    <!-- Right side petals -->
+    <use href="#petal" transform="rotate(45) translate(0, -60)" />  <!-- Top Right -->
+    <use href="#petal" transform="rotate(135) translate(0, -60)" /> <!-- Bottom Right -->
+  </g>
+
+  <!-- Text shifted to the right, aligning with the gap on the right side of the flower -->
+  <text x="180" y="140" text-anchor="start" class="text">phasicon.</text>
+</svg>
