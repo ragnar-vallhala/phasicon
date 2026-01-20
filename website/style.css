@@ -136,7 +136,8 @@ nav a:hover {
 .intro-content {
     flex: 1;
     background-color: #dce6d3; /* Muted Green from image */
-    padding: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -431,12 +432,12 @@ nav a:hover {
 }
 
 .glass-card {
-    width: 300px;
-    height: 400px;
+    width: 340px; /* Widened to fit 5 nav items comfortably */
+    height: 420px;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 24px;
+    border-radius: 28px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -465,6 +466,93 @@ nav a:hover {
 
 .bar.active {
     background: var(--accent-dark);
+}
+
+.app-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    margin-top: auto;
+    position: relative; /* Ensure z-index works contextually */
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+    min-width: 0; /* Allow shrinking */
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+    transition: all 0.3s;
+}
+
+.nav-item:hover .nav-icon {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.nav-label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: #555;
+    opacity: 0.9;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Central AI Action Button */
+.nav-item.ai-action {
+    flex: 0 0 70px; /* Fixed width for the button container */
+    margin-top: -35px; /* Pull up to float */
+    overflow: visible; /* Allow button to overflow container */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Specificity Boost: Use .nav-icon.action-btn */
+.nav-icon.action-btn {
+    width: 65px;
+    height: 65px;
+    opacity: 1;
+    background: #34d399; /* Emerald Green base */
+    background: linear-gradient(135deg, #34d399 0%, #059669 100%); /* Emerald Gradient */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(16, 185, 129, 0.4); /* Shadow to match */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 4px solid #edf3e6; /* Match card background for cutout effect */
+    z-index: 10;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
+}
+
+.nav-icon.action-btn img {
+    width: 45%;
+    height: 45%;
+    filter: brightness(0); /* Black icon */
+    display: block; /* Eliminate inline spacing */
+}
+
+/* Adjust labels for non-action items */
+.nav-item:not(.ai-action) .nav-label {
+    margin-top: 2px;
 }
 
 /* Use Cases Section */
@@ -777,4 +865,138 @@ footer {
     .newsletter-input {
         justify-content: center;
     }
+}
+
+/* Assets Page Styles */
+.assets-page {
+    padding-top: 100px;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+.assets-title {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+    color: var(--accent-dark);
+}
+
+.assets-section {
+    max-width: 1000px;
+    margin: 0 auto 6rem auto;
+    padding: 0 2rem;
+}
+
+.assets-section h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+/* Typography Assets */
+.font-group {
+    margin-bottom: 3rem;
+}
+
+.font-group h3 {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.font-meta {
+    color: #888;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.font-demo.serif {
+    font-family: var(--font-serif);
+}
+
+.font-demo.sans {
+    font-family: var(--font-sans);
+}
+
+.font-demo h1, .font-demo h2, .font-demo h3 { margin-bottom: 0.5rem; }
+
+/* Color Swatches */
+.swatch-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.swatch {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    font-size: 0.9rem;
+}
+
+.swatch span { font-weight: 500; display: block; margin-bottom: 5px; }
+.swatch code { font-size: 0.75rem; opacity: 0.8; font-family: monospace; }
+
+/* Gradient Grid */
+.gradient-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.gradient-bar {
+    width: 100%;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    font-weight: 500;
+}
+
+/* Icon Grid */
+.assets-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 2rem;
+}
+
+.asset-icon-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.2s;
+}
+
+.asset-icon-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-green);
+}
+
+.asset-icon-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.asset-icon-card span {
+    font-size: 0.8rem;
+    color: #666;
+    font-family: monospace;
 }

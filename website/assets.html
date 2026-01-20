@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assets - Phasicon.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"
+                style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                <svg viewBox="0 0 250 250" class="logo-icon">
+                    <path d="M125 125 M0,0 C14,-12 14,-35 0,-50 C-14,-35 -14,-12 0,0" style="display:none"
+                        id="petal-def-asset" />
+                    <defs>
+                        <path id="petal-shape-asset" d="M0,0 C14,-12 14,-35 0,-50 C-14,-35 -14,-12 0,0"
+                            fill="currentColor" />
+                    </defs>
+                    <g transform="translate(125, 125)">
+                        <use href="#petal-shape-asset" transform="rotate(0) translate(0, -35)" />
+                        <use href="#petal-shape-asset" transform="rotate(45) translate(0, -35)" />
+                        <use href="#petal-shape-asset" transform="rotate(90) translate(0, -35)" />
+                        <use href="#petal-shape-asset" transform="rotate(135) translate(0, -35)" />
+                        <use href="#petal-shape-asset" transform="rotate(180) translate(0, -35)" />
+                        <use href="#petal-shape-asset" transform="rotate(225) translate(0, -35)" />
+                        <use href="#petal-shape-asset" transform="rotate(270) translate(0, -35)" />
+                        <use href="#petal-shape-asset" transform="rotate(315) translate(0, -35)" />
+                    </g>
+                </svg>
+                <span class="logo-text">phasicon.</span>
+            </a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="assets.html" class="active">Assets</a>
+        </nav>
+    </header>
+
+    <main class="assets-page">
+        <h1 class="assets-title">Design Assets</h1>
+
+        <section class="assets-section">
+            <h2>Typography</h2>
+            <div class="type-specimen">
+                <div class="font-group">
+                    <h3>Playfair Display</h3>
+                    <p class="font-meta">Serif / Headings</p>
+                    <div class="font-demo serif">
+                        <h1>Heading 1 - Natural Intelligence</h1>
+                        <h2>Heading 2 - Vital Monitoring</h2>
+                        <h3>Heading 3 - Design System</h3>
+                        <p>The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                </div>
+                <div class="font-group">
+                    <h3>Outfit</h3>
+                    <p class="font-meta">Sans-Serif / Body</p>
+                    <div class="font-demo sans">
+                        <p class="large">Large Text - Minimalist Interface design for modern health tracking.</p>
+                        <p>Body Text - Remote health metric monitoring and disease prediction system containing two
+                            parts, a rechargable wearable device.</p>
+                        <p class="small">Small Text - Copyright 2026 Phasicon Design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="assets-section">
+            <h2>Color Palette</h2>
+            <div class="swatch-grid">
+                <div class="swatch" style="background-color: var(--accent-green);">
+                    <span>Sage Green</span>
+                    <code>#8da370</code>
+                </div>
+                <div class="swatch" style="background-color: var(--accent-dark); color: white;">
+                    <span>Dark Olive</span>
+                    <code>#4a5d3f</code>
+                </div>
+                <div class="swatch" style="background-color: var(--accent-light);">
+                    <span>Pale Green</span>
+                    <code>#dce6d3</code>
+                </div>
+                <div class="swatch" style="background-color: #34d399; color: white;">
+                    <span>Emerald (AI)</span>
+                    <code>#34d399</code>
+                </div>
+                <div class="swatch" style="background-color: #059669; color: white;">
+                    <span>Deep Emerald</span>
+                    <code>#059669</code>
+                </div>
+                <div class="swatch" style="background-color: #fcfcfc; border: 1px solid #eee;">
+                    <span>Off White (Bg)</span>
+                    <code>#fcfcfc</code>
+                </div>
+                <div class="swatch" style="background-color: #1a1a1a; color: white;">
+                    <span>Charcoal (Text)</span>
+                    <code>#1a1a1a</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="assets-section">
+            <h2>Gradients</h2>
+            <div class="gradient-grid">
+                <div class="gradient-bar" style="background: linear-gradient(135deg, #e0eacc 0%, #cbdcb0 100%);">
+                    <span>Intro Placeholder</span>
+                </div>
+                <div class="gradient-bar" style="background: linear-gradient(135deg, #4efdb4 0%, #2bd991 100%);">
+                    <span>Mint Button (Old)</span>
+                </div>
+                <div class="gradient-bar"
+                    style="background: linear-gradient(135deg, #34d399 0%, #059669 100%); color: white;">
+                    <span>Emerald Button (New)</span>
+                </div>
+                <div class="gradient-bar"
+                    style="background: linear-gradient(135deg, #4a5d3f 0%, #2e3b26 100%); color: white;">
+                    <span>Visual Card</span>
+                </div>
+                <div class="gradient-bar"
+                    style="background: linear-gradient(135deg, #8da370 0%, #6b8255 100%); color: white;">
+                    <span>Patch Card</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="assets-section">
+            <h2>Iconography</h2>
+            <div class="assets-icon-grid">
+                <div class="asset-icon-card">
+                    <img src="icon/leaves.svg" alt="Leaves">
+                    <span>leaves</span>
+                </div>
+                <div class="asset-icon-card">
+                    <img src="icon/sprout_person.svg" alt="Sprout">
+                    <span>sprout_person</span>
+                </div>
+                <div class="asset-icon-card">
+                    <img src="icon/trees.svg" alt="Trees">
+                    <span>trees</span>
+                </div>
+                <div class="asset-icon-card">
+                    <img src="icon/landscape.svg" alt="Landscape">
+                    <span>landscape</span>
+                </div>
+                <div class="asset-icon-card">
+                    <img src="icon/helix.svg" alt="Helix">
+                    <span>helix</span>
+                </div>
+                <div class="asset-icon-card">
+                    <img src="icon/summary.svg" alt="Summary">
+                    <span>summary</span>
+                </div>
+                <div class="asset-icon-card">
+                    <img src="icon/vitals.svg" alt="Vitals">
+                    <span>vitals</span>
+                </div>
+                <div class="asset-icon-card">
+                    <img src="icon/activity.svg" alt="Activity">
+                    <span>activity</span>
+                </div>
+                <div class="asset-icon-card">
+                    <img src="icon/ai_assistant.svg" alt="AI">
+                    <span>ai_assistant</span>
+                </div>
+                <div class="asset-icon-card">
+                    <img src="icon/profile.svg" alt="Profile">
+                    <span>profile</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo">phasicon.</div>
+                <p>Natural Intelligence for Human Health.</p>
+            </div>
+            <div class="footer-newsletter">
+                <span>Stay Connected</span>
+                <div class="newsletter-input">
+                    <input type="email" placeholder="Email Address">
+                    <button>&rarr;</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">Email</a>
+            </div>
+            <div class="copyright">© 2026 Phasicon Design. All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+
+</html>
